@@ -1,3 +1,8 @@
+* {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
 a {
   text-decoration: none;
 }
@@ -12,12 +17,21 @@ h1,h2,h3,h4,h5,h6,p {
   font-family: 'Poppins', sans-serif;
   color: #33373e;
 }
+p {
+  line-height: 26px;
+}
 
 h1 {
   font-weight: 300;
-  text-align: center;
-  margin-bottom: 30px;
+}
+
+.title-section {
   margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.title-line {
+  border-bottom: 1px solid #efefef;
 }
 
 h3 {
@@ -25,9 +39,12 @@ h3 {
   font-weight: 300;
 }
 
-h4 {
+h4, .project-card-title {
   font-family: 'Gothic A1', sans-serif;
   font-size: 20px;
+  display: block;
+  color: #33373e;
+  font-weight: 600;
 }
 
 
@@ -35,8 +52,7 @@ p {
   font-family: 'Gothic A1', sans-serif;
 }
 .project-container {
-  width: 80%;
-  max-width: 500px;
+  width: 100%;
   border: 1px solid #e8e8e8;
   padding: 20px;
   border-radius: 5px;
@@ -88,7 +104,9 @@ p {
 
 .content-center {
   margin: 0 auto;
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
+  padding-bottom: 50px;
 }
 
 .interest {
@@ -135,7 +153,6 @@ p {
 }
 
 .full-stack {
-  /* color: #E91E63; */
   color: #F06292;
   font-size: 15px;
   font-family: 'Lora', serif;
@@ -169,6 +186,15 @@ p {
 
 .title {
   text-align: inherit;
+  display: inline-block;
+  border-bottom: 2px solid #F06292;
+  margin-bottom: -1px;
+}
+.subtitle {
+  color: #a5a5a5;
+  font-weight: 200;
+  font-size: 15px;
+  margin-top: 10px;
 }
 
 .bio {
@@ -236,6 +262,10 @@ li.bio {
   margin-bottom: 3px;
 }
 
+.project-title {
+  font-size: 30px;
+  margin-bottom: -5px;
+}
 .project-title-container {
   margin-bottom: 15px;
 }
@@ -257,8 +287,107 @@ li.bio {
 .project-status-complete {
   color: #7CB342;
 }
+.project-status-idea {
+  color: #26C6DA;
+}
 .blog-date {
   font-size: 11px;
+}
+.contact-input {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #d7d7d7;
+  font-size: 18px;
+  padding: 9px 12px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  transition: border 0.3s ease-in-out;
+}
+.contact-input::placeholder {
+    color: #bebebe;
+}
+.contact-textarea {
+  width: 100%;
+  height: 200px;
+}
+.contact-input:focus, .contact-textarea:focus {
+  outline: none !important;
+  border: 1px solid #F06292;
+  box-shadow: 0 0 5px #F06292;
+}
+.contact-submit {
+  background-color: #F06292;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border: 0;
+  max-width: 300px;
+  margin: 0 auto;
+  display: block;
+}
+.contact-submit:hover {
+  background-color: #EC407A;
+  cursor: pointer;
+}
+.project-headline {
+  overflow: auto;
+  margin-bottom: 29px;
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 35px;
+}
+.project-image {
+  width: 250px;
+  float: left;
+}
+.project-metadata {
+  margin-left: 220px;
+}
+.project-body-image {
+  width: 230px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+
+.project-numbered-list {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+.project-numbered-list-container {
+  margin-top: 20px;
+}
+.project-subtitle {
+     font-size: 22px;
+    border-bottom: 1px solid #ededed;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    margin-top: 70px;
+}
+.project-subcontainer {
+  display: inline-block;
+}
+.project-body-image-left {
+  float: left;
+  width: 200px;
+}
+.project-body-image-container {
+  text-align: center;
+}
+.project-body-image-even {
+  display: inline-block;
+  width: 32%;
+  object-fit: cover;
+  height: 50%;
+  margin-top: 20px;
+  max-height: 209px;
+}
+.project-body-image-final {
+  width: 100%;
+  margin-top: 30px;
+}
+.project-p-with-image-left {
+  margin-left: 230px;
+  margin-top: 50px;
 }
 @media only screen and (max-width: 600px) {
   .nav-section {
@@ -273,13 +402,11 @@ li.bio {
     display: none;
   }
   .content-center {
-    /* padding: 30px; */
-    /* width: calc(100% - 60px); */
     padding: 20px;
-    width: calc(100% - 40px);
+    width: 100%;
     padding-bottom: 10px;
   }
-  .title {
+  .title-section {
     margin-top: 0;
   }
   .name, .full-stack {
@@ -318,10 +445,6 @@ li.bio {
     right: 13px;
     top: 38px;
     display: inline-block;
-  }
-
-  .project-container {
-    width: calc(100% - 40px);
   }
   .mobile-copyright {
     display: block;
