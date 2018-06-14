@@ -128,6 +128,30 @@
         console.log('adf');
         $('.hidable-nav').toggleClass('visible-nav');
       });
+
+      function enable(keyword) {
+        $(".project-container").each(function(element) {
+          if ($(this).find(".project-status-value").text().trim() === keyword || keyword === "ALL") {
+            $(this).css("display", "block");
+          } else {
+            $(this).css("display", "none");
+          }
+        });
+      }
+
+      $(".project-filter").on("click", function(elm) {
+        $(".project-filter-active").removeClass("project-filter-active");
+        $(this).addClass("project-filter-active");
+        if ($(this).text() === "ALL") {
+          enable($(this).text());
+        } else if ($(this).text() === "COMPLETED") {
+          enable("COMPLETE");
+        } else if ($(this).text() === "IN PROGRESS") {
+          enable("IN PROGRESS");
+        } else if ($(this).text() === "IDEA PHASE") {
+          enable("IDEA");
+        }
+      });
     </script>
   </body>
 </html>
