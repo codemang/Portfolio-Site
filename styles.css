@@ -336,6 +336,11 @@ li.bio {
   border-bottom: 1px solid #ededed;
   padding-bottom: 35px;
 }
+.project-headline-no-bottom {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
 .project-image {
   width: 250px;
   float: left;
@@ -419,6 +424,13 @@ li.bio {
 }
 .project-body-image-mobile {
   display: none;
+}
+.article-p {
+  margin: 20px 0;
+}
+.project-body-image-even-same-height {
+  height: inherit;
+  max-height: inherit;
 }
 @media only screen and (max-width: 600px) {
   .nav-section {
