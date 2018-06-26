@@ -1,0 +1,35 @@
+!!!
+%html>
+  %head>
+    %link{rel: :stylesheet, type: "text/css", href: 'https://fonts.googleapis.com/css?family=Gothic+A1|Poppins'}
+    %link{rel: :stylesheet, type: "text/css", href: 'https://fonts.googleapis.com/css?family=Lora:400,400i'}
+    -# %link{rel: :stylesheet, type: "text/css", href: 'css/styles.css'}
+    %link{rel: :stylesheet, type: "text/css", href: '/stylesheets/styles.css'}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
+    %script{type: 'text/javascript', src: "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"}
+  %body
+    %div.nav-section
+      %div.profile-container
+        %img.profile-image{src: "https://i.imgur.com/oSkgQJm.jpg"}
+        %p.name Nate Rubin
+        %p.full-stack Full Stack Developer
+        -# %div.iconPreview.hamburger{style: "background-image: url(&quot;data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzIwMCcgd2lkdGg9JzIwMCcgIGZpbGw9IiNmZmZmZmYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAgMTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48cGF0aCBkPSJNMjIsMzRoNTZjMi4yLDAsNC0xLjgsNC00YzAtMi4yLTEuOC00LTQtNEgyMmMtMi4yLDAtNCwxLjgtNCw0QzE4LDMyLjIsMTkuOCwzNCwyMiwzNHoiPjwvcGF0aD48cGF0aCBkPSJNNzgsNDZIMjJjLTIuMiwwLTQsMS44LTQsNGMwLDIuMiwxLjgsNCw0LDRoNTZjMi4yLDAsNC0xLjgsNC00QzgyLDQ3LjgsODAuMiw0Niw3OCw0NnoiPjwvcGF0aD48cGF0aCBkPSJNNzgsNjZIMjJjLTIuMiwwLTQsMS44LTQsNGMwLDIuMiwxLjgsNCw0LDRoNTZjMi4yLDAsNC0xLjgsNC00QzgyLDY3LjgsODAuMiw2Niw3OCw2NnoiPjwvcGF0aD48L2c+PC9zdmc+&quot;);"}
+      %div.hidable-nav
+        %div.nav-item-container
+          %a.nav-item{ class: @active_nav_item == 'about' && 'active-nav-item'} About
+          %a.nav-item{ class: @active_nav_item == 'projects' && 'active-nav-item', href: "/projects"} Projects
+          %a.nav-item{ class: @active_nav_item == 'blog' && 'active-nav-item', href: "/blog"} Blog
+          %a.nav-item{ class: @active_nav_item == 'contact' && 'active-nav-item', href: "/contact"} Contact
+        %div.social-media-item-container
+          %a.nav-item.social-media-item{target: "_blank", href: "https://github.com/codemang"} Github
+          %a.nav-item.social-media-item{target: "_blank", href: "https://www.instagram.com/natertottot/"} Instagram
+        %p.copyright &copy; 2018 Codemang
+    %div.content-section
+      %div.content-center
+        =yield
+
+        %p.copyright.mobile-copyright &copy; 2018 Codemang
+    :javascript
+        $('.hamburger').on('click', function() {
+          $('.hidable-nav').toggleClass('visible-nav');
+        });

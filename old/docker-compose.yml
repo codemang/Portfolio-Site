@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile-dev
+    ports:
+      - "8000:8000"
+
+
+
+  prod:
+    build:
+      context: .
+      dockerfile: Dockerfile-prod
+    environment:
+      - VIRTUAL_HOST=www.codemang.com

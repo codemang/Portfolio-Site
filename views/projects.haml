@@ -1,0 +1,47 @@
+%div.title-section
+  %div.title-line
+    %h1.title Projects
+%div.project-filters-container
+  %p.project-filter.project-filter-active All
+  %p.project-filter Complete
+  %p.project-filter In Progress
+  %p.project-filter Idea Phase
+
+- @projects.each do |project|
+  %div.project-container
+    %div.project-title-container
+      %a.project-card-title{href: "/projects/low-poly-fox.html"}= project['title']
+      %span.project-status-label STATUS:
+      - project_class = project['status'].downcase.gsub(' ', '-')
+      %span.project-status-value{class: "project-status-#{project_class}"}= "&nbsp;#{project['status']}"
+    %a{href: "/projects/low-poly-fox.html"}
+      %p= project['subtitle']
+    %div.project-tag-container
+      - project['tags'].each do |tag|
+        %p.project-tag= tag
+
+
+:javascript
+    function enable(keyword) {
+      $(".project-container").each(function(element) {
+        if ($(this).find(".project-status-value").text().trim() === keyword || keyword === "All") {
+          $(this).css("display", "block");
+        } else {
+          $(this).css("display", "none");
+        }
+      });
+    }
+
+    $(".project-filter").on("click", function(elm) {
+      $(".project-filter-active").removeClass("project-filter-active");
+      $(this).addClass("project-filter-active");
+      if ($(this).text() === "All") {
+        enable("All");
+      } else if ($(this).text() === "Complete") {
+        enable("Complete");
+      } else if ($(this).text() === "In Progress") {
+        enable("In Progress");
+      } else if ($(this).text() === "Idea Phase") {
+        enable("Idea");
+      }
+    });

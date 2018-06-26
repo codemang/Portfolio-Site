@@ -1,0 +1,50 @@
+[
+  {
+    "title": "News Media Assistant",
+    "subtitle": "A chrome extension which aims to help you identify deception in news articles, by inlining discussion and debate from the community.",
+    "status": "Idea",
+    "tags": ["Chrome Extension", "News Media"]
+  },
+  {
+    "title": "Low Poly Fox",
+    "subtitle": "A low-poly rendering of a fox, made from laser cut wood.",
+    "status": "Complete",
+    "tags": ["Diy", "Laser Cutting", "Wood Working"]
+  },
+  {
+    "title": "Split Mechanical Keyboard",
+    "subtitle": "A custom layout, acrylic mechanical keyboard.",
+    "status": "In Progress",
+    "tags": ["DIY", "Laser Cutting", "Mechanical Keyboard"]
+  },
+  {
+    "title": "Wallee",
+    "subtitle": "An Electron app which finds beautiful images to set as your desktop wallpaper.",
+    "status": "In Progress",
+    "tags": ["Electron"]
+  },
+  {
+    "title": "Raspberry Pi Home Server",
+    "subtitle": "A minimal home server made with a raspberry pi and wood.",
+    "status": "Idea",
+    "tags": ["DIY", "Raspberry Pi", "Wood Working"]
+  },
+  {
+    "title": "Car Wash",
+    "subtitle": "An IOS app that help users schedule home car washes. Think Uber for car washes.",
+    "status": "Complete",
+    "tags": ["IOS"]
+  },
+  {
+    "title": "Linehop",
+    "subtitle": "An IOS app that lets users view the line length at various bars in the Ann Arbor area.",
+    "status": "Complete",
+    "tags": ["IOS"]
+  },
+  {
+    "title": "Flur",
+    "subtitle": "An IOS app that lets users find and contribute to geo-cached photo albums all over the world.",
+    "status": "Complete",
+    "tags": ["IOS", "Geo Cache"]
+  }
+]

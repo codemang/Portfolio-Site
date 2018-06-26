@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Gothic+A1|Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="nav-section">
+      <div class="profile-container">
+        <img class="profile-image" src="https://i.imgur.com/oSkgQJm.jpg"/>
+        <p class="name">Nate Rubin</p>
+        <p class="full-stack">Full Stack Developer</p>
+        <div class="iconPreview hamburger" style="background-image: url(&quot;data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzIwMCcgd2lkdGg9JzIwMCcgIGZpbGw9IiNmZmZmZmYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAgMTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48cGF0aCBkPSJNMjIsMzRoNTZjMi4yLDAsNC0xLjgsNC00YzAtMi4yLTEuOC00LTQtNEgyMmMtMi4yLDAtNCwxLjgtNCw0QzE4LDMyLjIsMTkuOCwzNCwyMiwzNHoiPjwvcGF0aD48cGF0aCBkPSJNNzgsNDZIMjJjLTIuMiwwLTQsMS44LTQsNGMwLDIuMiwxLjgsNCw0LDRoNTZjMi4yLDAsNC0xLjgsNC00QzgyLDQ3LjgsODAuMiw0Niw3OCw0NnoiPjwvcGF0aD48cGF0aCBkPSJNNzgsNjZIMjJjLTIuMiwwLTQsMS44LTQsNGMwLDIuMiwxLjgsNCw0LDRoNTZjMi4yLDAsNC0xLjgsNC00QzgyLDY3LjgsODAuMiw2Niw3OCw2NnoiPjwvcGF0aD48L2c+PC9zdmc+&quot;);"></div>
+      </div>
+      <div class="hidable-nav">
+        <div class="nav-item-container">
+          <a class="nav-item active-nav-item">About</a>
+          <a class="nav-item" href="/projects.html">Projects</a>
+          <a class="nav-item" href="/blog.html">Blog</a>
+          <a class="nav-item" href="/contact.html">Contact</a>
+        </div>
+        <div class="social-media-item-container">
+          <a target="_blank" class="nav-item social-media-item" href="https://github.com/codemang">Github</a>
+          <a target="_blank" class="nav-item social-media-item" href="https://www.instagram.com/natertottot/">Instagram</a>
+        </div>
+        <p class="copyright">&copy; 2018 Codemang</p>
+      </div>
+    </div>
+    <div class="content-section">
+      <div class="content-center">
+        <div class="title-section">
+          <div class="title-line">
+            <h1 class="title">About Me</h1>
+          </div>
+        </div>
+        <p class="bio">I am a full stack developer with experience building Web apps, IOS apps, and more.</p>
+        <p class="bio">My go to tools are.</p>
+        <li class="bio">Ruby & Rails</li>
+        <li class="bio">React & Flux</li>
+        <li class="bio">Docker</li>
+        <p class="bio">When I'm not coding you can find me</p>
+        <li class="bio">Hiking/Camping</li>
+        <li class="bio">Climbing</li>
+        <li class="bio">DIY Projects</li>
+        <li class="bio">Snowboarding</li>
+        <li class="bio">Wood Working</li>
+        <p class="bio">Check out my <a class="bio-link" href="/projects.html">Projects</a> and <a class="bio-link" href="/blog.html">Blog</a> to learn more</p>
+        <p class="copyright mobile-copyright">&copy; 2018 Codemang</p>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $('.hamburger').on('click', function() {
+        console.log('adf');
+        $('.hidable-nav').toggleClass('visible-nav');
+      });
+    </script>
+  </body>
+</html>
