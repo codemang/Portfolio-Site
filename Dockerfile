@@ -28,9 +28,11 @@ RUN gem install bundler
 
 RUN mkdir /app
 WORKDIR /app
-COPY . /app
 
+COPY Gemfile /app/Gemfile
+COPY Gemfile.lock /app/Gemfile.lock
 RUN bundle install
 
+COPY . /app
 EXPOSE 80
-CMD ["/bin/sh" "-c" "PATH=/root/.rbenv/shims:/usr/local/rbenv/shims:/usr/local/rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin && bundle exec rackup -p 80 -o '0.0.0.0'"]
+CMD PATH=/root/.rbenv/shims:/usr/local/rbenv/shims:/usr/local/rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin && bundle exec rackup -p 80 -o '0.0.0.0'
