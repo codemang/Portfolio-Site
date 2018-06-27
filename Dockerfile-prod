@@ -1,5 +1,0 @@
-FROM resin/raspberry-pi-alpine-python
-RUN mkdir /app
-WORKDIR /app
-EXPOSE 80
-CMD python -m SimpleHTTPServer 80
