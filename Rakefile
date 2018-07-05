@@ -1,11 +1,11 @@
-def command_with_env(command)
-  `eval $(egrep -v '^#' .env | xargs) && #{command}`
+def source_env_string
+  "eval $(egrep -v '^#' .env | xargs)"
 end
 
 task :remote_deploy do
-  command_with_env('ssh $SSH_ENDPOINT "$PROJECT_DIR/deploy.sh"')
+  `ssh $SSH_ENDPOINT '#{source_env_string} $PROJECT_DIR/deploy.sh'`
 end
 
 task :sync_env do
-  command_with_env('scp .env $SSH_ENDPOINT:$PROJECT_DIR')
+  `#{source_env_string} && scp .env $SSH_ENDPOINT:$PROJECT_DIR`
 end
