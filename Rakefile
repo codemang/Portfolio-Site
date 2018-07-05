@@ -3,7 +3,8 @@ def source_env_string
 end
 
 task :remote_deploy do
-  `ssh $SSH_ENDPOINT '#{source_env_string} $PROJECT_DIR/deploy.sh'`
+  Rake::Task["sync_env"].execute
+  `#{source_env_string} && ssh $SSH_ENDPOINT "cd $PROJECT_DIR && #{source_env_string} ./deploy.sh"`
 end
 
 task :sync_env do
