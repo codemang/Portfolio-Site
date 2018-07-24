@@ -3,13 +3,15 @@
     "title": "News Media Assistant",
     "subtitle": "A chrome extension which aims to help you identify deception in news articles, by inlining discussion and debate from the community.",
     "status": "Idea",
-    "tags": ["Chrome Extension", "News Media"]
+    "tags": ["Chrome Extension", "News Media"],
+    "slug": "news_media_assistant"
   },
   {
     "title": "Low Poly Fox",
     "subtitle": "A low-poly rendering of a fox, made from laser cut wood.",
     "status": "Complete",
-    "tags": ["Diy", "Laser Cutting", "Wood Working"]
+    "tags": ["Diy", "Laser Cutting", "Wood Working"],
+    "slug": "low_poly_fox"
   },
   {
     "title": "Split Mechanical Keyboard",

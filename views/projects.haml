@@ -10,18 +10,7 @@
   %p.project-filter Idea Phase
 
 - @projects.each do |project|
-  %div.project-container
-    %div.project-title-container
-      %a.project-card-title{href: "/projects/low-poly-fox.html"}= project['title']
-      %span.project-status-label STATUS:
-      - project_class = project['status'].downcase.gsub(' ', '-')
-      %span.project-status-value{class: "project-status-#{project_class}"}= "&nbsp;#{project['status']}"
-    %a{href: "/projects/low-poly-fox.html"}
-      %p= project['subtitle']
-    %div.project-tag-container
-      - project['tags'].each do |tag|
-        %p.project-tag= tag
-
+  = haml :'partials/project_card', locals: {project: project}
 
 :javascript
     function enable(keyword) {

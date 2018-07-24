@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    byebug (10.0.2)
     ffi (1.9.25)
     haml (5.0.4)
       temple (>= 0.8.0)
@@ -29,6 +30,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  byebug
   haml
   sass
   sinatra

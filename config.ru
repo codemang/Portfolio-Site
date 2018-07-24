@@ -2,7 +2,7 @@ require 'rubygems'
 require 'bundler'
 require 'json'
 
-Bundler.require
+Bundler.require(:default, :development)
 
 require 'sass/plugin/rack'
 
