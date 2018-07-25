@@ -1,4 +1,4 @@
-%div.project-container
+%div.project-container{class: locals[:extra_css_classes]}
   %div.project-title-container
     %a.project-card-title{href: "/projects/#{project['slug']}"}= project['title']
     %span.project-status-label STATUS:
