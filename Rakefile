@@ -11,14 +11,6 @@ task :sync_env do
   `#{source_env_string} && scp .env $SSH_ENDPOINT:$PROJECT_DIR`
 end
 
-task :dev_server do
-  `rm -f public/stylesheets/*.css`
-  `rm -f public/stylesheets/*.css.map`
-  `rm -f public/stylesheets/sass/styles.scss`
-  `cat public/stylesheets/sass/*.scss > public/stylesheets/sass/styles.scss`
-  `bundle exec rackup -p 1234`
-end
-
 require 'sinatra'
 require 'sprockets'
 require 'sprockets-helpers'
