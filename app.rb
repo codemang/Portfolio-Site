@@ -51,6 +51,6 @@ class App < Sinatra::Base
 
   get '/projects/:id' do
     @project = load_projects.find{|proj| proj['slug'] == params['id']}
-    haml :'projects/low_poly_fox'
+    haml :"projects/#{@project['slug']}"
   end
 end

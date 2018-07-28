@@ -1,0 +1,58 @@
+%div.title-section
+  %div.title-line
+    %h1.title Projects
+
+.project-headline
+  %img.project-body-image.project-body-image-left{ src: "https://i.imgur.com/tBKFhpy.png"}
+    .project-metadata
+      = haml :"partials/project_card", locals: {project: @project, extra_css_classes: 'project-container-no-border'}
+
+.project-body
+  .project-subcontainer
+    %h3.project-subtitle The Problem
+    %p.article-p
+      For my Senior Design project, I was tasked
+      with identifying a problem and solving it with technology. After
+      considering a handful of ideas, my teammates and I kept returning
+      to one of the great ironies of technology: it has simultaneously
+      connected individuals to the broader world in an unprecendented
+      fashion, while making it extremely easy to feel disconnected from
+      those closest to you. We've all been to a restaurant and seen a
+      group of friends glued to their phones. The question was, how do
+      we levarage technology to both...
+    %p.project-numbered-list 1. Engage users with the their physical surrounding environment.
+    %p.project-numbered-list 2. Engage users with the people in your area.
+    %h3.project-subtitle The Idea
+    %p.article-p
+      Users fire up the Flur application and first
+      see a map of their current city. Overlayed on the map they see a
+      series of icons, each of which is an individual Flur. A Flur is a
+      geo-cache of photos, submitted by all app users who have visited
+      that Flur. You can view all the photos at a Flur, and submit your
+      own one, once you're within 50 feet of the Flur.
+    %p.article-p
+      Each Flur additionaly has a prompt associated
+      with it. For example, the first Flur ever created prompted users to
+      take a picture of themselves and a stranger. This gave each Flur a
+      unique identity, and further created a bond between all
+      contributers to the Flur.</p>
+    .project-body-image-container
+      %img.project-body-image.project-body-image-even.project-body-image-even-same-height{src: "https://i.imgur.com/tBKFhpy.png"}
+      %img.project-body-image.project-body-image-even.project-body-image-even-same-height{src: "https://i.imgur.com/6KhVPLV.png"}
+    %p.article-p You could also see a history of all the Flurs you created and contributed to.
+    .project-body-image-container
+      %img.project-body-image.project-body-image-even.project-body-image-even-same-height{src: "https://i.imgur.com/GCEJR8z.jpg"}
+      %img.project-body-image.project-body-image-even.project-body-image-even-same-height{src: "https://i.imgur.com/CnaIRQl.png"}
+    %h3.project-subtitle Technical Details
+    %p.article-p We built the app with the following technologies...
+    .project-numbered-list-container
+      %p.project-numbered-list 1. Objective-C for our client-side code.
+      %p.project-numbered-list 2. Parse for our backend storage and geo processing.
+      %p.project-numbered-list 3. Cocoapods for our dependency manager.
+    %p.article-p
+      Using parse made it super easy to store geo
+      data and process it, such as finding a set of nodes closest to a
+      geo point. We spent most of our time working on
+      features and building our MVP, instead of grappling with technical
+      challenges in the geo space. Although Parse is limiting by nature,
+      it was a great fit for what we wanted to do.</p>
