@@ -18,3 +18,11 @@ task :dev_server do
   `cat public/stylesheets/sass/*.scss > public/stylesheets/sass/styles.scss`
   `bundle exec rackup -p 1234`
 end
+
+require 'sinatra'
+require 'sprockets'
+require 'sprockets-helpers'
+require 'sinatra/asset_pipeline/task'
+require './app'
+
+Sinatra::AssetPipeline::Task.define! App

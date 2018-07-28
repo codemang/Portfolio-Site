@@ -36,10 +36,8 @@ RUN bundle install
 # Copy app after the gemfile and bundling so that changes to app code don't
 # invalidate the gems cache
 COPY . /app
-
-# Compile SCSS into CSS
-RUN find . -type f -name '*.scss'  -exec cat {} + >> styles.scss
-RUN bundle exec sass styles.scss > public/css/styles.css
+RUN RACK_ENV=production rake assets:clean
+RUN RACK_ENV=production rake assets:precompile
 
 EXPOSE 80
-CMD PATH=/root/.rbenv/shims:/usr/local/rbenv/shims:/usr/local/rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin && bundle exec rackup -p 80 -o '0.0.0.0'
+CMD PATH=/root/.rbenv/shims:/usr/local/rbenv/shims:/usr/local/rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin && RACK_ENV=production bundle exec rackup -p 80 -o '0.0.0.0'

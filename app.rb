@@ -1,4 +1,11 @@
+require 'sinatra/asset_pipeline'
+require 'sinatra'
+
 class App < Sinatra::Base
+
+  set :assets_paths, %w(assets/javascripts assets/stylesheets)
+  register Sinatra::AssetPipeline
+
   before do
     if request.path_info == '/'
       @active_nav_item = 'about'
@@ -31,6 +38,7 @@ class App < Sinatra::Base
       @@projects ||= JSON.parse(File.read('projects.json'))
     end
   end
+
 
   get '/' do
     haml :index
