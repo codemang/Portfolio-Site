@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,CAAE,CACA,KAAK,CAAE,OAAO,CACd,WAAW,CAAE,uBAAuB,CACpC,WAAW,CAAE,IAAI",
-"sources": ["sass/general.scss"],
-"names": [],
-"file": "general.css"
-}
