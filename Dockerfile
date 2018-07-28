@@ -26,6 +26,7 @@ RUN echo 'gem: --no-rdoc --no-ri' >> /.gemrc
 RUN rbenv global 2.4.1
 RUN gem install bundler
 
+EXPOSE 80
 RUN mkdir /app
 WORKDIR /app
 
@@ -36,8 +37,8 @@ RUN bundle install
 # Copy app after the gemfile and bundling so that changes to app code don't
 # invalidate the gems cache
 COPY . /app
+ENV PATH="/root/.rbenv/shims:/usr/local/rbenv/shims:/usr/local/rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
 RUN RACK_ENV=production rake assets:clean
 RUN RACK_ENV=production rake assets:precompile
-
-EXPOSE 80
-CMD PATH=/root/.rbenv/shims:/usr/local/rbenv/shims:/usr/local/rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin && RACK_ENV=production bundle exec rackup -p 80 -o '0.0.0.0'
+CMD RACK_ENV=production bundle exec rackup -p 80 -o '0.0.0.0'

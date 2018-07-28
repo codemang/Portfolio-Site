@@ -9,9 +9,6 @@ can_restart=$?
 
 docker build -t portfolio_site .
 
-find . -type f -name '*.scss'  -exec cat {} + >> styles.scss
-docker exec $docker_id bundle exec sass styles.scss > public/css/styles.css
-
 if [[ $can_restart -eq 0 ]]; then
   docker restart $docker_id
 else
