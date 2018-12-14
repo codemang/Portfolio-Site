@@ -1,11 +1,16 @@
+
 %div.project-container{class: locals[:extra_css_classes]}
-  %div.project-title-container
-    %a.project-card-title{href: "/projects/#{project['slug']}"}= project['title']
-    %span.project-status-label STATUS:
-    - project_class = project['status'].downcase.gsub(' ', '-')
-    %span.project-status-value{class: "project-status-#{project_class}"}= "&nbsp;#{project['status']}"
-  %a{href: "/projects/low-poly-fox.html"}
-    %p= project['subtitle']
-  %div.project-tag-container
-    - project['tags'].each do |tag|
-      %p.project-tag= tag
+  %a.project-card-title{href: "/projects/#{project['slug']}"}
+    %img{src: "/images/#{project['image']}", style: "width: 100%; border-top-left-radius: 5px; border-top-right-radius: 5px;"}
+
+  .lower-project
+    %div.project-title-container
+      %a.project-card-title{href: "/projects/#{project['slug']}"}= project['title']
+      %span.project-status-label STATUS:
+      - project_class = project['status'].downcase.gsub(' ', '-')
+      %span.project-status-value{class: "project-status-#{project_class}"}= "&nbsp;#{project['status']}"
+    %a{href: "/projects/low-poly-fox.html"}
+      %p= project['subtitle']
+    %div.project-tag-container
+      - project['tags'].each do |tag|
+        %p.project-tag= tag

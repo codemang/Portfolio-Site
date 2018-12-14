@@ -1,6 +1,7 @@
 require 'sinatra/asset_pipeline'
 require 'sinatra'
 
+
 class App < Sinatra::Base
 
   set :assets_paths, %w(assets/javascripts assets/stylesheets)
@@ -46,7 +47,7 @@ class App < Sinatra::Base
 
   get '/projects' do
     @projects = load_projects
-    haml :projects
+    haml :projects, layout: :wide_layout
   end
 
   get '/projects/:id' do

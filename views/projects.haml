@@ -1,38 +1,36 @@
 %link{rel: :stylesheet, type: "text/css", href: '/stylesheets/card.css'}
 
 %div.title-section
-  %div.title-line
-    %h1.title Projects
-%div.project-filters-container
-  %p.project-filter.project-filter-active All
-  %p.project-filter Complete
-  %p.project-filter In Progress
-  %p.project-filter Idea Phase
+  %h1.title Projects
 
-- @projects.each do |project|
-  = haml :'partials/project_card', locals: {project: project}
+.container{style: 'width: 100% !important;'}
+  - @projects.each_slice(2) do |project_group|
+    .row
+      - project_group.each do |project|
+        .col-md-6
+          = haml :'partials/project_card', locals: {project: project}
 
-:javascript
-    function enable(keyword) {
-      $(".project-container").each(function(element) {
-        if ($(this).find(".project-status-value").text().trim() === keyword || keyword === "All") {
-          $(this).css("display", "block");
-        } else {
-          $(this).css("display", "none");
-        }
-      });
-    }
-
-    $(".project-filter").on("click", function(elm) {
-      $(".project-filter-active").removeClass("project-filter-active");
-      $(this).addClass("project-filter-active");
-      if ($(this).text() === "All") {
-        enable("All");
-      } else if ($(this).text() === "Complete") {
-        enable("Complete");
-      } else if ($(this).text() === "In Progress") {
-        enable("In Progress");
-      } else if ($(this).text() === "Idea Phase") {
-        enable("Idea");
-      }
-    });
+-# :javascript
+-#     function enable(keyword) {
+-#       $(".project-container").each(function(element) {
+-#         if ($(this).find(".project-status-value").text().trim() === keyword || keyword === "All") {
+-#           $(this).css("display", "block");
+-#         } else {
+-#           $(this).css("display", "none");
+-#         }
+-#       });
+-#     }
+-#
+-#     $(".project-filter").on("click", function(elm) {
+-#       $(".project-filter-active").removeClass("project-filter-active");
+-#       $(this).addClass("project-filter-active");
+-#       if ($(this).text() === "All") {
+-#         enable("All");
+-#       } else if ($(this).text() === "Complete") {
+-#         enable("Complete");
+-#       } else if ($(this).text() === "In Progress") {
+-#         enable("In Progress");
+-#       } else if ($(this).text() === "Idea Phase") {
+-#         enable("Idea");
+-#       }
+-#     });

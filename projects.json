@@ -1,29 +1,48 @@
 [
-  {
-    "title": "News Media Assistant",
-    "subtitle": "A chrome extension which aims to help you identify deception in news articles, by inlining discussion and debate from the community.",
-    "status": "Idea",
-    "tags": ["Chrome Extension", "News Media"],
-    "slug": "news_media_assistant"
+    {
+    "title": "crowdchecked",
+    "subtitle": "a chrome extension which aims to help you identify deception in news articles, by inlining discussion and debate from the community.",
+    "status": "idea",
+    "tags": ["chrome extension", "news media"],
+    "slug": "news_media_assistant",
+    "image": "crowdchecked.png"
   },
   {
-    "title": "Low Poly Fox",
-    "subtitle": "A low-poly rendering of a fox, made from laser cut wood.",
-    "status": "Complete",
-    "tags": ["Diy", "Laser Cutting", "Wood Working"],
-    "slug": "low_poly_fox"
+    "title": "low poly fox",
+    "subtitle": "a low-poly rendering of a fox, made from laser cut wood.",
+    "status": "complete",
+    "tags": ["diy", "laser cutting", "wood working"],
+    "slug": "low_poly_fox",
+    "image": "fox.png"
   },
   {
-    "title": "Split Mechanical Keyboard",
+    "title": "split mechanical keyboard",
+    "subtitle": "a custom layout, acrylic mechanical keyboard.",
+    "status": "in progress",
+    "tags": ["diy", "laser cutting", "mechanical keyboard"],
+    "image": "keyboard.jpg"
+  },
+  {
+    "title": "flur",
+    "subtitle": "an ios app that lets users find and contribute to geo-cached photo albums all over the world.",
+    "status": "complete",
+    "tags": ["ios", "geo cache"],
+    "slug": "flur",
+    "image": "flur.png"
+  },
+  {
+    "title": "Crypto Arbitrage Trading Bot",
     "subtitle": "A custom layout, acrylic mechanical keyboard.",
     "status": "In Progress",
-    "tags": ["DIY", "Laser Cutting", "Mechanical Keyboard"]
+    "tags": ["DIY", "Laser Cutting", "Mechanical Keyboard"],
+    "image": "crypto.png"
   },
   {
     "title": "Wallee",
     "subtitle": "An Electron app which finds beautiful images to set as your desktop wallpaper.",
     "status": "In Progress",
-    "tags": ["Electron"]
+    "tags": ["Electron"],
+    "image": "earthporn.jpg"
   },
   {
     "title": "Raspberry Pi Home Server",
@@ -42,12 +61,5 @@
     "subtitle": "An IOS app that lets users view the line length at various bars in the Ann Arbor area.",
     "status": "Complete",
     "tags": ["IOS"]
-  },
-  {
-    "title": "Flur",
-    "subtitle": "An IOS app that lets users find and contribute to geo-cached photo albums all over the world.",
-    "status": "Complete",
-    "tags": ["IOS", "Geo Cache"],
-    "slug": "flur"
   }
 ]
